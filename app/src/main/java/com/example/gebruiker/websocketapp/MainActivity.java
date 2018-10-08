@@ -18,12 +18,13 @@ import java.net.URISyntaxException;
 public class MainActivity extends AppCompatActivity {
     private TextView textView;
     private ConstraintLayout layout;
+    private String socketURL = "http://192.168.43.204:3000";
 
 
     private Socket mSocket;
     {
         try {
-            mSocket = IO.socket("http://192.168.178.24:3000");
+            mSocket = IO.socket(socketURL);
         } catch (URISyntaxException e) {}
     }
 
